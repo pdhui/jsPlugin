@@ -1,0 +1,143 @@
+
+$DayWidth : 60px;
+$DayHeight : 50px;
+body{
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.428571429;
+    color: #333;
+    background-color: #fff;
+}
+.glyphicon {
+position: relative;
+top: 1px;
+display: inline-block;
+font-family: 'Glyphicons Halflings';
+-webkit-font-smoothing: antialiased;
+font-style: normal;
+font-weight: normal;
+line-height: 1;
+}
+.glyphicon-arrow-left{
+    background: url("../img/toleft2.png");
+    width: 29px;
+    height: 46px;
+}
+.glyphicon-arrow-right{
+    background: url("../img/toright2.png");
+    width: 29px;
+    height: 46px;
+}
+.datetimepicker{
+    .datetimepicker-days{
+        table.table-condensed{
+            thead .switch {
+                .switchline{
+                    float: left;
+                    margin: 0 5px;
+                }
+                .lunarMonth, .switchlunar{
+                    float: left;
+                    width: 42px;
+                    font-size: 12px;
+                }
+                .switch_YM {
+                    float: left;
+                    width: 60px;
+                    position: relative;
+                    cursor: pointer;
+                    &.first {
+                        margin-left: 38px;
+                    }
+                    .allyears,.allmonth{
+                        width: 55px;
+                        position: absolute;
+                        left: 9px;
+                        border: 1px solid #eee;
+                        height: 242px;
+                        overflow-y: auto;
+                        z-index: 200;
+                        display: none;
+                        &.active{
+                            display: block;
+                        }
+                        &>p:hover{
+                            background-color: #abc;
+                            color: #fff; 
+
+                        }
+                        &>p.active{
+                            background-color: #F19B2E;
+                        }                      
+                    }
+                    
+                }
+                .toToday{
+                    background-color: #63A2E2;                    
+                    width: 32px;
+                    float: left;
+                    cursor: pointer;
+                    display: none;
+                }
+            }
+            th,td{
+                text-align: center;
+                width: $DayWidth;
+                height: $DayHeight;
+                border: 1px solid #eee;
+            }
+            tbody tr.oddcl {
+                td {
+                    background-color: #DDDADA;
+                    div.lunarday{
+                        background-color: #DDDADA;
+                    }
+                }
+            }
+            tbody tr td.today{
+                    background-color: #039;
+                    color: #fff;
+                    div.lunarday{
+                        color: #fff;
+                        background-color: #039;
+                    }
+                }
+            tr .day{
+                cursor: pointer;
+                vertical-align: top;
+                color: #000;
+                
+                &.old, &.new{
+                    color: #999;
+                }
+                &.selected{
+                    border: 1px solid #4D9DEE;
+                }
+                .lunarday{
+                    font-size: 10px;
+                    display: block;
+                    background-color: initial;
+                    color: #6BCCEB;;
+                }
+                .worktime{
+                    text-align: left;
+                    font-weight: 200;
+                    font-size: 0.8em;
+                    float: left;                  
+                    color: #FFF;
+                }
+                .bustime {
+                    @extend .worktime;
+                    background-color: red;
+                }
+                .freetime{
+                    @extend .worktime;
+                    background-color: #12AA55;
+                }
+                .dd{
+                    line-height: 30px;
+                }
+            }
+        }
+    }
+}

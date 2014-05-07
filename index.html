@@ -1,0 +1,121 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>calendar</title>
+    <link rel="stylesheet" href="css/reset.css" type="text/css" >
+    <link rel="stylesheet" href="css/calendar.css" type="text/css" >
+</head>
+
+<body>
+    <div style="width:320px;margin:0 auto;position:relative;top:10%;">
+        <div class="datetimepicker">
+            <div class="datetimepicker-days">
+                <table class="table-condensed" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th class="prev" style="cursor: pointer;"><i class="glyphicon glyphicon-arrow-left"></i>
+                            </th>
+                            <th colspan="5" class="switch">
+                              <div style="width:210px;">
+
+                                  <div class="switchlunar">
+                                      <div style="font-size: 0.8em;">农历</div>
+                                      <h2 class="lunarMonth"></h2>
+                                  </div>
+                                  <div class="switch_YM">
+                                    <h2 class="viewyear"></h2>
+                                    <div class="allyears"></div>
+                                  </div>
+                                    <span class="switchline">-</span>
+                                  <div class="switch_YM">
+                                    <h2 class="viewmonth"></h2>
+                                    <div class="allmonth"></div>
+                                  </div>
+                                  <div class="toToday"><span>今天<span></div>
+                              </div>
+                            </th>
+                            <th class="next" style="cursor: pointer;"><i class="glyphicon glyphicon-arrow-right"></i></th>
+                        </tr>
+                        <tr>
+                            <th class="dow">一</th>
+                            <th class="dow">二</th>
+                            <th class="dow">三</th>
+                            <th class="dow">四</th>
+                            <th class="dow">五</th>
+                            <th class="dow">六</th>
+                            <th class="dow">日</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="day">28</td>
+                            <td class="day">29</td>
+                            <td class="day">30</td>
+                            <td class="day">1</td>
+                            <td class="day">2</td>
+                            <td class="day">3</td>
+                            <td class="day">4</td>
+                        </tr>
+                        <tr class="oddcl">
+                            <td class="day">5</td>
+                            <td class="day">6</td>
+                            <td class="day">7</td>
+                            <td class="day">8</td>
+                            <td class="day">9</td>
+                            <td class="day">10</td>
+                            <td class="day">11</td>
+                        </tr>
+                        <tr>
+                            <td class="day">12</td>
+                            <td class="day">13</td>
+                            <td class="day">14</td>
+                            <td class="day">15</td>
+                            <td class="day">16</td>
+                            <td class="day">17</td>
+                            <td class="day">18</td>
+                        </tr>
+                        <tr class="oddcl">
+                            <td class="day">19</td>
+                            <td class="day">20</td>
+                            <td class="day">21</td>
+                            <td class="day">22</td>
+                            <td class="day">23</td>
+                            <td class="day">24</td>
+                            <td class="day">25</td>
+                        </tr>
+                        <tr>
+                            <td class="day">26</td>
+                            <td class="day">27</td>
+                            <td class="day">28</td>
+                            <td class="day">29</td>
+                            <td class="day">30</td>
+                            <td class="day">31</td>
+                            <td class="day">1</td>
+                        </tr>
+                        <tr>
+                            <td class="day">2</td>
+                            <td class="day">3</td>
+                            <td class="day">4</td>
+                            <td class="day">5</td>
+                            <td class="day">6</td>
+                            <td class="day">7</td>
+                            <td class="day">8</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="./javascript/jquery-1.8.3.min.js" charset="UTF-8"></script>    
+    <script type="text/javascript" src="./javascript/calendar.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="./javascript/calendar.zh-CN.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="./javascript/lunar.js" charset="UTF-8"></script>
+    <script type="text/javascript">
+        $('.datetimepicker').datetimepicker({language:"zh-CN"});
+        lud = new Lunar(new Date());
+        console.log(lud);
+    </script>
+</body>
+
+</html>
